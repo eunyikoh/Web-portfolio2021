@@ -1,3 +1,5 @@
+*{box-sizing: border-box;}
+
 :root {
   --electric-purple: #9643ff;
   --white: #ffffff;
@@ -5,11 +7,131 @@
   --black: #000000;
 }
 
+.Title2 {
+  font-family: NunitoSans;
+  font-size: 50px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.Title1 {
+  font-family: NunitoSans;
+  font-size: 50px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.Title3 {
+  font-family: NunitoSans;
+  font-size: 48px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.para1 {
+  font-family: NunitoSans;
+  font-size: 24px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.para3 {
+  font-family: NunitoSans;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.para2 {
+  font-family: NotoSansKRBold;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.para4 {
+  font-family: NunitoSans;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: right;
+}
+
+.para6 {
+  font-family: NunitoSans;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: right;
+}
+
+.para5 {
+  font-family: NunitoSans;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: right;
+}
+
+.para7_KR {
+  font-family: NotoSansKR;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.caption1 {
+  font-family: NunitoSans;
+  font-size: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: right;
+}
+
 .main{ 
   /* width: 1280px; */
   /* height: 720px; */
   position: relative;
-  padding: 32px;
   width: 100vw;
   height: 100vh;
   min-height: 720px;
@@ -18,6 +140,7 @@
 
 .header{
   width: 100vw;
+  padding: 32px;
   display: flex;
   justify-content: space-between;
 }
@@ -26,7 +149,13 @@ h1{
   height: 24px;
 }
 
-.main__title{
+section {
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+}
+
+.title1{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,7 +216,7 @@ li:nth-child(5)
 } */
 
 .info{
-  width: 100vw;
+  width: calc(100vw - 64px);
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -102,4 +231,27 @@ li:nth-child(5)
   letter-spacing: normal;
   text-align: right;
   color: var(--white);
+}
+
+.li_container{display: flex;}
+
+.li_container > li {
+  width: 100%;
+}
+.summary_page{
+  background-color: var(--white);
+}
+
+.color1{
+  background-color: var(--electric-purple);
+}
+
+.color2{
+  background-color: var(--warm-grey);
+}
+
+.list_group > li{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
