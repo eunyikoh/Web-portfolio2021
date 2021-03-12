@@ -7,17 +7,6 @@
   --black: #000000;
 }
 
-.Title2 {
-  font-family: NunitoSans;
-  font-size: 50px;
-  font-weight: 800;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.2;
-  letter-spacing: normal;
-  text-align: left;
-  color: black;
-}
 
 .Title1 {
   font-family: NunitoSans;
@@ -28,6 +17,17 @@
   line-height: 1.1;
   letter-spacing: normal;
   text-align: center;
+}
+
+.Title2 {
+  font-family: NunitoSans;
+  font-size: 50px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
 }
 
 .Title3 {
@@ -52,17 +52,6 @@
   text-align: left;
 }
 
-.para3 {
-  font-family: NunitoSans;
-  font-size: 20px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.2;
-  letter-spacing: normal;
-  text-align: left;
-}
-
 .para2 {
   font-family: NotoSansKRBold;
   font-size: 20px;
@@ -74,21 +63,21 @@
   text-align: center;
 }
 
+.para3 {
+  font-family: NunitoSans;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+}
+
 .para4 {
   font-family: NunitoSans;
   font-size: 15px;
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.1;
-  letter-spacing: normal;
-  text-align: right;
-}
-
-.para6 {
-  font-family: NunitoSans;
-  font-size: 12px;
-  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.1;
@@ -107,7 +96,18 @@
   text-align: right;
 }
 
-.para7_KR {
+.para6 {
+  font-family: NunitoSans;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: right;
+}
+
+.para7 {
   font-family: NotoSansKR;
   font-size: 12px;
   font-weight: normal;
@@ -266,3 +266,48 @@ header .navtext{
   justify-content: space-between;
   padding: 20px;
 }
+.CheckBoxWrapper{
+  position: relative;
+}
+
+.checkbox{
+  opacity: 0;
+  z-index: 1;
+  border-radius: 15px;
+  width: 42px;
+  height: 26px;
+}
+  .checkbox[type="checkbox"]:checked + .CheckBoxLabel {
+    background: #9643FF;
+  }
+  .checkbox[type="checkbox"]:checked + .CheckBoxLabel:after {
+      content: "";
+      display: block;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      margin-left: 21px;
+      transition: 0.2s;
+  }
+
+  .CheckBoxLabel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 26px;
+    border-radius: 15px;
+    background: #bebebe;
+    cursor: pointer;
+  }
+    .CheckBoxLabel:after {
+      content: "";
+      display: block;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 3px;
+      background: #ffffff;
+      box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
+      transition: 0.2s;
+  }
