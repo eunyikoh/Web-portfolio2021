@@ -76,7 +76,7 @@
 
 .para4 {
   font-family: NunitoSans;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -87,7 +87,7 @@
 
 .para5 {
   font-family: NunitoSans;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -98,7 +98,7 @@
 
 .para6 {
   font-family: NunitoSans;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -109,7 +109,7 @@
 
 .para7 {
   font-family: NotoSansKR;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -120,7 +120,7 @@
 
 .caption1 {
   font-family: NunitoSans;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -240,6 +240,108 @@ header .navtext{
 .list_group{
   display: flex;
 }
+/* 수정~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.contents_wrapper {
+  outline: 1px solid red;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  transform: translateY(50%);
+}
+.li_container > li + li {
+  margin-top: 20px;
+}
+.list_group {  /* 1070px */
+  display: flex;
+}
+.list_group > li{
+  /* flex-basis: auto; */
+  box-sizing: border-box;
+  margin: 0 5px;
+  padding: 0 !important;
+  height: 44px;
+}
+
+.list_group > li.list_icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 1px;
+  /* padding: 0; */
+  transform: translateY(-2px)
+}
+.list_group > li > a {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 12px 20px 0;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.list_group > li.list_icon > a {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-size: 0px;
+}
+
+/* ------------ .list_group별 li 넓이 계산 ----------- */
+/* line 1 */
+.li_container > li:nth-child(1) > ul > li:nth-child(1) {
+  width: 14.95327102804%;
+}
+.li_container > li:nth-child(1) > ul > li:nth-child(3) {
+  width: 27.10280373832%;
+}
+.li_container > li:nth-child(1) > ul > li:nth-child(5) {
+width: 28.03738317757%;
+}
+.li_container > li:nth-child(1) > ul > li:nth-child(6) {
+  width: 17.85046728972%;
+}
+
+/* line 2 */
+.li_container > li:nth-child(2) > ul > li:nth-child(1) {
+  width: 21.4953271028%;
+}
+.li_container > li:nth-child(2) > ul > li:nth-child(2) {
+  width: 12.14953271028%;
+}
+.li_container > li:nth-child(2) > ul > li:nth-child(4) {
+  width: 29.90654205607%;
+}
+.li_container > li:nth-child(2) > ul > li:nth-child(6) {
+  width: 24.39252336449%;
+}
+
+/* line 3 */
+.li_container > li:nth-child(3) > ul > li:nth-child(1) {
+  width: 33.64485981308%;
+}
+.li_container > li:nth-child(3) > ul > li:nth-child(2) {
+  width: 14.95327102804%;
+}
+.li_container > li:nth-child(3) > ul > li:nth-child(3) {
+width: 26.26168224299%;
+}
+.li_container > li:nth-child(3) > ul > li:nth-child(5) {
+  width: 17.75700934579%;
+}
+
+/* line 4 */
+.li_container > li:nth-child(4) > ul > li:nth-child(1) {
+  width: 15.88785046729%;
+}
+.li_container > li:nth-child(4) > ul > li:nth-child(3) {
+  width: 19.6261682243%;
+}
+.li_container > li:nth-child(4) > ul > li:nth-child(4) {
+width: 15.98130841121%;
+}
+.li_container > li:nth-child(4) > ul > li:nth-child(6),
+.li_container > li:nth-child(4) > ul > li:nth-child(7) {
+  width: 17.75700934579%;
+}
+/* ------------------------------------------------ */
 
 .summary_page .li_container{
   display: flex;
@@ -257,6 +359,11 @@ header .navtext{
   background-color: var(--electric-purple);
 }
 
+.summary_page .Title2{
+  color: var(--black);
+  margin-bottom: 36px;
+}
+
 .summary_page .color2{
   background-color: var(--warm-grey);
 }
@@ -266,6 +373,13 @@ header .navtext{
   justify-content: space-between;
   padding: 20px;
 }
+
+
+.summary_page img{
+  width: 48px;
+  height: 48px;
+}
+
 .CheckBoxWrapper{
   position: relative;
 }
@@ -311,3 +425,50 @@ header .navtext{
       box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
       transition: 0.2s;
   }
+
+  .aboutme{
+    background-color: var(--white);
+  }
+
+  .contents_wrapper>.Title2{
+    margin-bottom: 100px;
+  }
+
+  .contents_wrapper>.Title2,.CheckBoxWrapper{
+    color: var(--black);
+  }
+
+  .caption1{
+    color: var(--black);
+  }
+
+  .myview{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .myview_contents{
+    width:280px;
+    height: auto;
+  }
+
+  .aboutme img{
+    width: 70px;
+    margin-bottom: 42px;
+  }
+
+  .myview_contents > h3{
+    margin-bottom: 10px;
+  }
+  .myview_contents > h3,.myview_contents > span{
+    color: var(--black);
+    line-height: 1.4em;
+  }
+
+  .myview_contents> a{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-size: 0px;
+  }
+  
