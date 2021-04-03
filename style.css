@@ -7,6 +7,23 @@
   --black: #000000;
 }
 
+.black {
+  color: var(--black);
+}
+.gray {
+  color: #c4c4c4 !important;
+}
+
+.show {
+  display: block !important;
+}
+.show_flex {
+  display: flex !important;
+}
+.hide {
+  display: none !important;
+}
+
 
 .Title1 {
   font-family: NunitoSans;
@@ -134,7 +151,7 @@
   /* height: 720px; */
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 64px);
   min-height: 720px;
   background-color: var(--electric-purple);
 }
@@ -149,6 +166,7 @@
   padding: 32px;
   display: flex;
   justify-content: space-between;
+  position: fixed;
 }
 
 h1{
@@ -224,7 +242,7 @@ header .navtext{
   display: flex;
   justify-content: space-between;
   position: absolute;
-  bottom: 32px;
+  bottom: 0px;
   opacity: 0.7;
   font-family: NunitoSans;
   font-size: 15px;
@@ -413,6 +431,7 @@ width: 15.98130841121%;
     border-radius: 15px;
     background: #bebebe;
     cursor: pointer;
+    transform: translate(54px, 12px);
   }
     .CheckBoxLabel:after {
       content: "";
@@ -430,24 +449,28 @@ width: 15.98130841121%;
     background-color: var(--white);
   }
 
-  .contents_wrapper>.Title2{
+  .aboutme > .contents_wrapper > .Title2{
     margin-bottom: 100px;
+    display: none;
   }
 
-  .contents_wrapper>.Title2,.CheckBoxWrapper{
+  .aboutme > .contents_wrapper > .Title2,.CheckBoxWrapper{
     color: var(--black);
   }
 
-  .caption1{
+  .aboutme .caption1{
     color: var(--black);
   }
 
-  .myview{
-    display: flex;
+  /* .myview{ */
+  .aboutme ul{
+    /* display: flex; */
+    display: none;
     justify-content: space-between;
-  }
+  } 
 
-  .myview_contents{
+  /* .myview_contents{ */
+  .aboutme ul > li {
     width:280px;
     height: auto;
   }
@@ -457,15 +480,19 @@ width: 15.98130841121%;
     margin-bottom: 42px;
   }
 
-  .myview_contents > h3{
+  /* .myview_contents > h3{ */
+  .aboutme ul > li > h3 {
     margin-bottom: 10px;
   }
-  .myview_contents > h3,.myview_contents > span{
+  /* .myview_contents > h3,.myview_contents > span{ */
+  .aboutme ul > li > h3,
+  .aboutme ul > li > span{
     color: var(--black);
     line-height: 1.4em;
   }
 
-  .myview_contents> a{
+  /* .myview_contents> a{ */
+  .aboutme ul > li > a {
     width: 100%;
     height: 100%;
     padding: 0;
