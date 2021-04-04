@@ -1,5 +1,8 @@
 const header = document.querySelector('.header'),
+    defaultNav = document.querySelector('.header nav > .default_nav'),
     navA = document.querySelectorAll('.header nav a'),
+    navButton = document.querySelectorAll('.default_nav a.nav_button'),
+    hamburgerButton = document.querySelector('.hamburger > a'),
     sectionAll = document.querySelectorAll('section'),
     mainPage = document.querySelector('.main__title'),
     summaryPage = document.querySelector('.summary_page'),
@@ -10,7 +13,33 @@ const header = document.querySelector('.header'),
     myviewTitle = document.querySelector('.myview_title'),
     AnothersTitle = document.querySelector('.Anothers_title'),
     myviewCaption = document.querySelector('.myview_caption'),
-    AnothersCaption = document.querySelector('.Anothers_caption');
+    AnothersCaption = document.querySelector('.Anothers_caption'),
+    navMenuPage = document.querySelector('.nav_menu'),
+    navMenuPageButton = navMenuPage.querySelectorAll('.nav_button'),
+    navOpen = document.querySelector('.nav_open'),
+    navCloseButton = navOpen.querySelector('.delete');
+
+function openNavPage() {
+    hamburgerButton.addEventListener('click', () => {
+        defaultNav.classList.add('hide');
+        navMenuPage.classList.add('show');
+        navOpen.classList.add('show');
+    });
+
+    navCloseButton.addEventListener('click', () => {
+        defaultNav.classList.remove('hide');
+        navMenuPage.classList.remove('show');
+        navOpen.classList.remove('show');
+    })
+
+    navMenuPageButton.forEach(ele => {
+        ele.addEventListener('click', () => {
+            defaultNav.classList.remove('hide');
+            navMenuPage.classList.remove('show');
+            navOpen.classList.remove('show');
+        })
+    })
+}
 
 function defaultAboutme() {
     myview.classList.add('show_flex');
@@ -41,7 +70,13 @@ function aboutmeConts() {
 }
 
 function handleClickNav() {
-    navA.forEach((ele, index) => {
+    navA.forEach(ele => {
+        ele.addEventListener('click', event => {
+            event.preventDefault();
+        })
+    });
+
+    navButton.forEach((ele, index) => {
         ele.addEventListener('click', (event) => {
             event.preventDefault();
             let height = 0;
@@ -52,6 +87,20 @@ function handleClickNav() {
             window.scrollTo({
                 top: height,
                 behavior: "smooth",
+            });
+        });
+    })
+
+    navMenuPageButton.forEach((ele, index) => {
+        ele.addEventListener('click', (event) => {
+            event.preventDefault();
+            let height = 0;
+            for (let i = 0; i < index; i++) {
+                let sectionHeight = sectionAll[i].clientHeight;
+                height += sectionHeight;
+            }
+            window.scrollTo({
+                top: height,
             });
         });
     })
@@ -80,6 +129,7 @@ function init() {
     handleClickNav();
     aboutmeConts();
     defaultAboutme();
+    openNavPage();
 }
 
 init();

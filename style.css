@@ -5,6 +5,7 @@
   --white: #ffffff;
   --warm-grey: #979797;
   --black: #000000;
+  --yellow: #FCFF52
 }
 
 .black {
@@ -160,6 +161,13 @@
   height: 24px;
 }
 
+.nav_open {
+  display: none;
+}
+.nav_open > li > a {
+  font-size: 0;
+}
+
 .header{
   width: 100vw;
   height: 24px;
@@ -167,6 +175,7 @@
   display: flex;
   justify-content: space-between;
   position: fixed;
+  z-index: 2000;
 }
 
 h1{
@@ -498,4 +507,34 @@ width: 15.98130841121%;
     padding: 0;
     font-size: 0px;
   }
+
+  .nav_menu{
+    background-color: var(--yellow);
+    padding-top: 159px;
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+  }
+
+  .nav_menu h2,.nav_menu a,.nav_menu span{
+    color:var(--black);
+    cursor: pointer;
+  }
+
+  .nav_menu span{
+    text-decoration: none;
+    display: none;
+  }
+
+  .nav_menu a{
+    text-decoration: underline;
+  }
+
+  .nav_menu a:hover ,
+  .nav_menu a:hover + span{
+    color: #9643FF;
+    display: inline-block;
+  }
+
+
   
