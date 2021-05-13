@@ -453,6 +453,42 @@ width: 15.98130841121%;
       box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
       transition: 0.2s;
   }
+  .ProjectBg{
+    width: 1073px;
+    height: 260px;
+    text-align: center;
+    line-height: 260px;
+  }
+
+  .ProjectBg a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .projects .ProjectBg{
+    background-image: url(images/img_behanceimage.png);
+    background-repeat: no-repeat;
+    background-size: 1073px 260px;
+    position: relative;
+  }
+    
+  .ProjectsTitle{
+    margin-bottom:36px;
+  }
+
+  .contents_wrapper .BehanceImg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .BehanceImg{
+    transform: translateY(15px);
+    margin-right: 16px;
+  }
 
   .aboutme{
     background-color: var(--white);
@@ -482,6 +518,7 @@ width: 15.98130841121%;
   .aboutme ul > li {
     width:280px;
     height: auto;
+    margin-top: 20px;
   }
 
   .aboutme img{
