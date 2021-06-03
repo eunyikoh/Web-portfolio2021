@@ -175,7 +175,7 @@
   display: flex;
   justify-content: space-between;
   position: fixed;
-  z-index: 2000;
+  z-index: 200000;
 }
 
 h1{
@@ -572,6 +572,20 @@ width: 15.98130841121%;
     color: #9643FF;
     display: inline-block;
   }
+  .nav .smile a {
+    transition: all .3s ease-out;
+  }
 
 
+  .emogeWrap {
+    outline: 2px solid red;
+    background-color: rgba(0, 0, 0, .1);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+  }
   
