@@ -111,7 +111,6 @@ function stampEmoge() {
     })
 
 }
-
 function openNavPage() {
     hamburgerButton.addEventListener('click', () => {
         defaultNav.classList.add('hide');
